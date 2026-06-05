@@ -13,7 +13,7 @@ class Jigyll < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/reidransom/jigyll/releases/download/v1.0.5/jigyll_Darwin_x86_64v1.tar.gz"
-      sha256 "ac5bbcb2c9407226f07663d70c3dd3995d3b6d89e0324ed57f7c5e05c4eeba1a"
+      sha256 "39d8875fc81d83687cc28ff72df237aab4b015c5e36578846200573e80426c16"
 
       define_method(:install) do
         bin.install "jigyll"
@@ -21,7 +21,7 @@ class Jigyll < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/reidransom/jigyll/releases/download/v1.0.5/jigyll_Darwin_arm64.tar.gz"
-      sha256 "5881bd33e1277188ed02313d898f263655a0ae81c32708025817d3d3911d06fb"
+      sha256 "af8f3913b8a206a2b9b2a78322b9acd01ee3c0a03fa9957cbbbf91f52b4127c9"
 
       define_method(:install) do
         bin.install "jigyll"
@@ -32,21 +32,21 @@ class Jigyll < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/reidransom/jigyll/releases/download/v1.0.5/jigyll_Linux_x86_64v1.tar.gz"
-      sha256 "9d52604db2a1bd47e57e0ddd3d72a61a75ba521730df0dad824ffd4909f61c1f"
+      sha256 "a9f639e163e2b4e49486483b67605ce5f9349a9d4e3302b03f8ac09a5e4028f7"
       define_method(:install) do
         bin.install "jigyll"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/reidransom/jigyll/releases/download/v1.0.5/jigyll_Linux_armv6.tar.gz"
-      sha256 "578b7b64b34557e9946cd9a7b388267496a720e656388a7d42f92e9f3a167935"
+      sha256 "aa71949765b2906ad8f9223350f75aeec481bc66e3c426c01df73cdc29284481"
       define_method(:install) do
         bin.install "jigyll"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/reidransom/jigyll/releases/download/v1.0.5/jigyll_Linux_arm64.tar.gz"
-      sha256 "aecda3d69dc31ac7390bec1b337998de86398e6a57f5e99b7e84c285e390d1ef"
+      sha256 "1180f5e73bbbc1d179060733a01eeb6040e45bb4509b3f6a7321f085caf2a5f8"
       define_method(:install) do
         bin.install "jigyll"
       end
