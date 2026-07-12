@@ -5,23 +5,23 @@
 class Jigyll < Formula
   desc "Go clone of the Jekyll static site generator"
   homepage "https://github.com/reidransom/jigyll"
-  version "1.3.0"
+  version "1.4.0"
   license "MIT"
 
   depends_on "dart-sass"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reidransom/jigyll/releases/download/v1.3.0/jigyll_Darwin_x86_64v1.tar.gz"
-      sha256 "da65525e5b73060910cdeeb18bc7dc1448e6584631c981b012f1cfe33255dfef"
+      url "https://github.com/reidransom/jigyll/releases/download/v1.4.0/jigyll_Darwin_x86_64v1.tar.gz"
+      sha256 "71025ae4dc2c15f88c40ad88c966ab2de05ee69e7e4a1ba052bc72126c54bc21"
 
       define_method(:install) do
         bin.install "jigyll"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reidransom/jigyll/releases/download/v1.3.0/jigyll_Darwin_arm64.tar.gz"
-      sha256 "f3ccfb94b2834edf413fb1a669a46cdfe0b23dc0212f1eaa7d9c15c570c6b249"
+      url "https://github.com/reidransom/jigyll/releases/download/v1.4.0/jigyll_Darwin_arm64.tar.gz"
+      sha256 "156ac0bf113988cd8c6a8e0b6d468ca8ed419a0051ebae4be1e0d6cc109102f7"
 
       define_method(:install) do
         bin.install "jigyll"
@@ -31,22 +31,22 @@ class Jigyll < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/jigyll/releases/download/v1.3.0/jigyll_Linux_x86_64v1.tar.gz"
-      sha256 "123053689e16bcc691c800170e57a11f2c6268fd5420ab7dad7ffeea6c330871"
+      url "https://github.com/reidransom/jigyll/releases/download/v1.4.0/jigyll_Linux_x86_64v1.tar.gz"
+      sha256 "97df899143f04e799b3f955186359ab3085c2ae3a81247b8afa8e6f51812a88a"
       define_method(:install) do
         bin.install "jigyll"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/jigyll/releases/download/v1.3.0/jigyll_Linux_armv6.tar.gz"
-      sha256 "a993f87aa7e70e60102b9e582886215bddd0dd476113540a972e32466d4264e0"
+      url "https://github.com/reidransom/jigyll/releases/download/v1.4.0/jigyll_Linux_armv6.tar.gz"
+      sha256 "a000767e7d214b5bc4379bfa61baa8e2a5d0b7d914ce84878180839b446ccdbe"
       define_method(:install) do
         bin.install "jigyll"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/jigyll/releases/download/v1.3.0/jigyll_Linux_arm64.tar.gz"
-      sha256 "cc0270fbd6f62752626bbe598ab6edf64ca970a9e839bd87b35414f3f1126dbc"
+      url "https://github.com/reidransom/jigyll/releases/download/v1.4.0/jigyll_Linux_arm64.tar.gz"
+      sha256 "fb5951bc957efbc4df8b39f53ef1818f0456174554ae7d7aeed5bcaeec5296e2"
       define_method(:install) do
         bin.install "jigyll"
       end
