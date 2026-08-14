@@ -5,21 +5,21 @@
 class Servd < Formula
   desc "Run and manage many local dev servers at once."
   homepage "https://github.com/reidransom/servd"
-  version "0.1.0-rc.3"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reidransom/servd/releases/download/v0.1.0-rc.3/servd_Darwin_x86_64.tar.gz"
-      sha256 "c86157de2a645545743f38e383c3dbe40cc23e2aefeb44cd1b53ec1af32ea015"
+      url "https://github.com/reidransom/servd/releases/download/v0.1.0/servd_Darwin_x86_64.tar.gz"
+      sha256 "f3f28a04dac34fd58921af5bbbdda418641d8d9b20b65096afda94eb126ee407"
 
       define_method(:install) do
         bin.install "servd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reidransom/servd/releases/download/v0.1.0-rc.3/servd_Darwin_arm64.tar.gz"
-      sha256 "ba1a6ab4202b63ed363c6f196f70c025272f8ce071994e04051b3e2b1d4668cb"
+      url "https://github.com/reidransom/servd/releases/download/v0.1.0/servd_Darwin_arm64.tar.gz"
+      sha256 "bcf5d098422c14f99498bdf80e5f2c8a603864458a06114afc940f0aff7886ac"
 
       define_method(:install) do
         bin.install "servd"
@@ -29,15 +29,15 @@ class Servd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/servd/releases/download/v0.1.0-rc.3/servd_Linux_x86_64.tar.gz"
-      sha256 "d97c028fe778268768b3dfcf044d350e0751bdef35ea48bde0b2cb3df40ab4a2"
+      url "https://github.com/reidransom/servd/releases/download/v0.1.0/servd_Linux_x86_64.tar.gz"
+      sha256 "5b6b99f8adf22106a59392890f859ffd0c1068c49f6bd970194bc2bf05562e37"
       define_method(:install) do
         bin.install "servd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/servd/releases/download/v0.1.0-rc.3/servd_Linux_arm64.tar.gz"
-      sha256 "9bca3009ef22ecdf77a914fc18aeee0fc6523a98dcd3503604a2ad2d6f1fd2b5"
+      url "https://github.com/reidransom/servd/releases/download/v0.1.0/servd_Linux_arm64.tar.gz"
+      sha256 "8e5d5dbe1c0f95793ec01b0d2e5f902cbb36bbd90b3508111658f396486b04dc"
       define_method(:install) do
         bin.install "servd"
       end
