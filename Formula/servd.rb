@@ -5,21 +5,21 @@
 class Servd < Formula
   desc "Run and manage many local dev servers at once."
   homepage "https://github.com/reidransom/servd"
-  version "0.6.2"
+  version "0.6.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/reidransom/servd/releases/download/v0.6.2/servd_Darwin_x86_64.tar.gz"
-      sha256 "ee2fe5dd1f10b97c3ba3cc3c61520df69ad6c6773004d9900b69652952b0f9be"
+      url "https://github.com/reidransom/servd/releases/download/v0.6.3/servd_Darwin_x86_64.tar.gz"
+      sha256 "fa1280d56c2295c1abca17a9a40f7fb553bae2d6763a2e8b69c3e70f236e6cc4"
 
       define_method(:install) do
         bin.install "servd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/reidransom/servd/releases/download/v0.6.2/servd_Darwin_arm64.tar.gz"
-      sha256 "49089490618751b8880ad9ccda361f656325396e6b3e44c6b2036925f6d6a86a"
+      url "https://github.com/reidransom/servd/releases/download/v0.6.3/servd_Darwin_arm64.tar.gz"
+      sha256 "87b7a2d4f5f3a76b8e307268280fceb9c708a8437aeda4404cb5c815012fa89d"
 
       define_method(:install) do
         bin.install "servd"
@@ -29,15 +29,15 @@ class Servd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/servd/releases/download/v0.6.2/servd_Linux_x86_64.tar.gz"
-      sha256 "3e3d5d4785e5f48d707680fcdbdc8d9436f5ce36319f03cce8b21c2a39370a82"
+      url "https://github.com/reidransom/servd/releases/download/v0.6.3/servd_Linux_x86_64.tar.gz"
+      sha256 "ebacc0850ad767c0016c30763864d4f60909ebdc6413848d53e18e99ff0b233e"
       define_method(:install) do
         bin.install "servd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/reidransom/servd/releases/download/v0.6.2/servd_Linux_arm64.tar.gz"
-      sha256 "562d5d2f0be3a9747f5858838fce47786c3676a2565e02251abebfc48c8defb5"
+      url "https://github.com/reidransom/servd/releases/download/v0.6.3/servd_Linux_arm64.tar.gz"
+      sha256 "ed9a8fd1e2ebfac255b455b68576a73909c42a17ba7cdf520b6209ee99f0029e"
       define_method(:install) do
         bin.install "servd"
       end
